@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Yukii</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;overflow:hidden;background:linear-gradient(135deg,#ffdde1,#ee9ca7)}
+.slide{display:none;height:100vh;width:100%;justify-content:center;align-items:center;flex-direction:column;text-align:center;padding:30px;box-sizing:border-box;color:#fff;position:relative;background-size:cover}
+.active{display:flex}
+h1{font-size:3em;text-shadow:2px 2px 8px rgba(0,0,0,.4)}
+p{max-width:800px;font-size:1.3em;line-height:1.7;background:rgba(0,0,0,.25);padding:20px;border-radius:20px}
+button{margin-top:25px;padding:15px 35px;font-size:1.2em;border:none;border-radius:30px;background:#fff;color:#ff4f81;cursor:pointer;box-shadow:0 5px 15px rgba(0,0,0,.3)}
+button:hover{transform:scale(1.05)}
+.sticker{position:absolute;font-size:40px;opacity:.8}
+.s1{top:10%;left:8%}.s2{top:20%;right:10%}.s3{bottom:18%;left:12%}.s4{bottom:12%;right:15%}
+.music-note{font-size:22px}
+</style>
+</head>
+<body>
+<audio id="bgmusic" loop controls>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.onload = function () {
+    document.getElementById("bgmusic").play();
+}
+</script>
+
+<div class="slide active">
+<div class='sticker s1'>🎈</div><div class='sticker s2'>🌸</div><div class='sticker s3'>🎂</div><div class='sticker s4'>✨</div>
+<h1>Welcome Yukii 💖</h1>
+<p>Today is your special day. I made this little surprise for you. I hope it brings a smile to your face. May your birthday be full of happiness. Stay happy and enjoy your day always.</p>
+<button onclick='nextSlide()'>🎵 Next</button>
+</div>
+
+<div class="slide">
+<div class='sticker s1'>📸</div><div class='sticker s2'>🌷</div><div class='sticker s3'>💫</div><div class='sticker s4'>🦋</div>
+<h1>Memories 🌸</h1>
+<p>Dear Yukii 🌸 Some memories stay in the heart forever. Your smile and nature make every moment brighter. Today we celebrate those beautiful memories. And look forward to many more.</p>
+<button onclick='nextSlide()'>🎵 Next</button>
+</div>
+
+<div class="slide">
+<h1>Birthday Wish ❤️</h1>
+<p>Happy Birthday Yukii ❤️ Wishing you a day filled with happiness, love, and countless beautiful moments. May this special day bring a bright smile to your face and fill your heart with joy. You deserve all the success and happiness in the world because you are truly special. May all your dreams come true and may this new year of your life bring endless blessings. Stay happy, keep smiling, and enjoy every moment of your beautiful day.</p>
+<button onclick='nextSlide()'>🎵 Next</button>
+</div>
+
+<div class="slide">
+<h1>Cut The Cake 🎂</h1>
+<p>Yukii 🎂 It’s time to cut your birthday cake. Make a wish before you click. May all your dreams come true today.</p>
+<button onclick='nextSlide()'>🍰 Cut Cake</button>
+</div>
+
+<div class="slide">
+<h1>Final Surprise 🎁</h1>
+<p>This little surprise is my final birthday gift for you, made specially to make your day even more memorable. Even though I have already given you all your gifts, this one comes straight from my heart and carries all my best wishes for you. I just wanted to make your birthday a little more special and bring a smile to your face. You truly deserve all the happiness, success, and beautiful moments in life. May your days always be filled with joy, laughter, and endless blessings. Once again, Happy Birthday Yukii, keep smiling and enjoy every beautiful moment of your special day.</p>
+<button onclick='nextSlide()'>🎵 Next</button>
+</div>
+
+<div class="slide">
+<h1>Enjoy Your Day 🎉</h1>
+<p>Keep smiling always, Yukii 💖</p>
+<button onclick='nextSlide()'>✨ Replay</button>
+</div>
+
+<script>
+let slides=document.querySelectorAll('.slide');let current=0;
+function nextSlide(){slides[current].classList.remove('active');current=(current+1)%slides.length;slides[current].classList.add('active');document.getElementById('bgMusic').play();}
+</script>
+</body>
+</html>
